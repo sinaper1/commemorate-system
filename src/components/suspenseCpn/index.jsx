@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 const SuspenseCpn = Cpn => {
 	return props => {
 		return (
-			<Suspense fallback={<div></div>}>
+			<Suspense fallback={<div/>}>
 				<Cpn {...props} />
 			</Suspense>
 		)

@@ -1,7 +1,7 @@
 import React from 'react';
 // import { connect } from 'react-redux';
 // import About from "../About";
-// import { increment } from '../../actions/index';
+// import { increment } from '../../actions/index.js';
 // import { Link } from "react-router-dom";
 
 

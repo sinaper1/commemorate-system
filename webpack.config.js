@@ -4,7 +4,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.jsx', // 入口文件
+  entry: './src/index.js', // 入口文件
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'), // 定义输出目录
@@ -26,7 +26,7 @@ module.exports = {
     //   // '@api': pathFn('./src/store/api'),
     //   // '@svg': pathFn('./src/assets/svg'),
     //   '@utils': pathFn('./src/utils'),
-    //   '@img': pathFn('./src/assets/img'),
+    //   '@images': pathFn('./src/assets/images'),
     //   '@mock': pathFn('./src/mock'),
     // },
   },
@@ -75,15 +75,15 @@ module.exports = {
     },
     // disableHostCheck: true,
     // historyApiFallback: {
-    //   index:'/home/index.html'
+    //   index.js:'/home/index.js.html'
     // },
   },
   plugins: [
     // new webpack.HotModuleReplacementPlugin(), // HMR允许在运行时更新各种模块，而无需进行完全刷新
     new HtmlWebPackPlugin({
       title: '照片墙',
-      template: './public/index.html',
-      filename: path.resolve(__dirname, 'dist/index.html'),
+      template: './public/index.js.html',
+      filename: path.resolve(__dirname, 'dist/index.js.html'),
     })
   ]
 };

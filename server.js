@@ -21,14 +21,14 @@ if (isDeveloping) {
   app.set('views', path.join(__dirname, 'public'))
   app.set('view engine', 'ejs')
 } else {
-  app.use(history({ index: '/home/index.html' }))
+  app.use(history({ index: '/home/index.js.html' }))
   app.use('/home', express.static(publicPath))
 }
 app.get('*', function (req, res, next) {
   if (isDeveloping) {
     res.render('index')
   } else {
-    res.sendFile(path.join(publicPath, '/index.html'))
+    res.sendFile(path.join(publicPath, '/index.js.html'))
 
   }
 })
