@@ -1,5 +1,5 @@
 // import { createStore } from 'redux';
-// import incrementReducer from '../reducers/index.js';
+// import incrementReducer from '../reducers/index.jsx';
 //
 // const store = createStore(incrementReducer);
 //

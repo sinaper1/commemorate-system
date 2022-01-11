@@ -1,12 +1,13 @@
 import React, {StrictMode} from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { Provider } from 'react-redux'
 import App from './router';
+// import {routes} from './router';
 import store from './store';
 import './assets/style/reset.less';
 import './index.less';
-import '@assets/index.js';
+import '@assets/index';
 
 ReactDOM.render(
   <StrictMode>
