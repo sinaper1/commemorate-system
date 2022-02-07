@@ -9,7 +9,6 @@ const { Option } = Select;
 
 const Home = (props) => {
   const [titleText, setTitleText] = useState('场均得分数据');
-  // const [playoffsText, setPlayoffsText] = useState('季后赛场均得分');
   const [xAxis, setXAxis] = useState('年份');
   const [yAxis, setYAxis] = useState('场均得分');
   const [theme, setTheme] = useState('');
@@ -171,8 +170,6 @@ const Home = (props) => {
     }
   }
 
-  console.log(regularSeasonData, playoffsData, '---playoffsData----');
-
   return (
     <div className={'home'}>
       <div className={'home_mode'}>
@@ -193,7 +190,6 @@ const Home = (props) => {
         </Select>
       </div>
       <div id={'regular'}/>
-      {/*<div id={'playoffs'}/>*/}
     </div>
   );
 }
