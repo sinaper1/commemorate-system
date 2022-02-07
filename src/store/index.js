@@ -1,10 +1,3 @@
-// import { createStore } from 'redux';
-// import incrementReducer from '../reducers/index.jsx';
-//
-// const store = createStore(incrementReducer);
-//
-// export default store;
-
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import reducer from '../reducers'

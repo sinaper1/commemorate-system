@@ -1,3 +1,5 @@
 export const GET_OwnInfo = 'users/GET_OwnInfo'
 export const GET_UserInfo = 'users/GET_UserInfo'
 export const GET_UserCollect = 'users/GET_UserCollect'
+export const GET_PLAYOFFSDATA = 'home/GET_PLAYOFFSDATA'
+export const GET_REGULARSEASONDATA = 'home/GET_REGULARSEASONDATA'
