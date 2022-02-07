@@ -185,13 +185,33 @@ export const regularSeasonData = [
 //季后赛数据
 export const playoffsData = [
   {
+    year: '2003', //年份
+    score: 0, //得分
+    rebounds: 0, //篮板
+    assists: 0, //助攻
+    steals: 0, //抢断
+    blocks: 0, //盖帽
+    miss: 0, //失误
+    foul: 0, //犯规
+  },
+  {
+    year: '2004', //年份
+    score: 0, //得分
+    rebounds: 0, //篮板
+    assists: 0, //助攻
+    steals: 0, //抢断
+    blocks: 0, //盖帽
+    miss: 0, //失误
+    foul: 0, //犯规
+  },
+  {
     year: '2005', //年份
     score: 30.8, //得分
     rebounds: 8.1, //篮板
     assists: 5.8, //助攻
     steals: 1.38, //抢断
-    blocks: 5.00, //盖帽
-    miss: 3.29, //失误
+    blocks: 0.69, //盖帽
+    miss: 5.00, //失误
     foul: 3.38, //犯规
   },
   {
@@ -315,6 +335,16 @@ export const playoffsData = [
     foul: 2.36, //犯规
   },
   {
+    year: '2018', //年份
+    score: 0, //得分
+    rebounds: 0, //篮板
+    assists: 0, //助攻
+    steals: 0, //抢断
+    blocks: 0, //盖帽
+    miss: 0, //失误
+    foul: 0, //犯规
+  },
+  {
     year: '2019', //年份
     score: 27.6, //得分
     rebounds: 10.8, //篮板
@@ -335,3 +365,34 @@ export const playoffsData = [
     foul: 1.17, //犯规
   },
 ];
+
+export const selectHomeData = [
+  {
+    value: 'score',
+    name: '得分',
+  },
+  {
+    value: 'rebounds',
+    name: '篮板',
+  },
+  {
+    value: 'assists',
+    name: '助攻',
+  },
+  {
+    value: 'steals',
+    name: '抢断',
+  },
+  {
+    value: 'blocks',
+    name: '盖帽',
+  },
+  {
+    value: 'miss',
+    name: '失误',
+  },
+  {
+    value: 'foul',
+    name: '犯规',
+  },
+]

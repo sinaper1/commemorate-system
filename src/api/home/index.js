@@ -1,4 +1,4 @@
-import {regularSeasonData, playoffsData} from '../../mock';
+import {regularSeasonData, playoffsData, selectHomeData} from '../../mock';
 
 export const getRegularSeasonData = () => {
   return regularSeasonData;
@@ -6,4 +6,8 @@ export const getRegularSeasonData = () => {
 
 export const getPlayoffsData = () => {
   return playoffsData;
+}
+
+export const getSelectData = () => {
+  return selectHomeData;
 }
