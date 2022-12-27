@@ -39,7 +39,8 @@ const HomeLayout = (props) => {
         <Menu theme="dark" onClick={go} mode="inline" selectedKeys={keys}>
           <Menu.Item key="/" icon={<BarChartOutlined />}>数据展示</Menu.Item>
           <Menu.Item key="/comic" icon={<PictureOutlined />}>漫画</Menu.Item>
-          <Menu.Item key="/origin" icon={<TagOutlined />}>缘由</Menu.Item>
+          {/*<Menu.Item key="/origin" icon={<TagOutlined />}>缘由</Menu.Item>*/}
+          {/*<Menu.Item key="/sign" icon={<PictureOutlined />}>签名</Menu.Item>*/}
         </Menu>
       </Sider>
       <Layout>

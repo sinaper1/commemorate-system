@@ -3,6 +3,7 @@ const { pathFn } = require('./utils')
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require('terser-webpack-plugin')
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 const baseConfig = require('./webpack')
 /**
@@ -10,11 +11,12 @@ const baseConfig = require('./webpack')
  */
 const proConfig = {
     mode: 'production',
+    target: ["web", "es5"],
     output: {
         path: pathFn("./dist"),
         filename: `js/[name].[chunkhash].js`,
         chunkFilename: `js/[name].[chunkhash].js`,
-        publicPath: "/home/",
+        publicPath: "/",
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -29,7 +31,7 @@ const proConfig = {
         new HtmlWebpackPlugin({
             title: '照片墙',
             template: pathFn('./public/index.html'),
-            filename: 'index.ejs',
+            filename: 'index.html',
             inject: 'body',
             config: 'window.config = <%- __CONFIG__ %>',
         }),
@@ -40,6 +42,10 @@ const proConfig = {
         }),
     ],
     optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({ terserOptions: { ecma: 5 } })
+        ],
         splitChunks: {
             cacheGroups: {
                 antd: {
@@ -48,12 +54,11 @@ const proConfig = {
                     chunks: "all",
                     priority: 2
                 },
-                svg:{
-                    test:/.svg$/,
-                    name:"svg",
+                svg: {
+                    test: /.svg$/,
+                    name: "svg",
                     chunks: "all",
                     priority: 5
-
                 }
             }
         }

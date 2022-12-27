@@ -16,6 +16,10 @@ const Origin = SuspenseCpn(
   lazy(() => import('../views/Origin/index'))
 )
 
+const Sign = SuspenseCpn(
+  lazy(() => import('../views/Sign/index'))
+)
+
 const App = () => {
   return useRoutes([
     { path: '/',
@@ -23,7 +27,8 @@ const App = () => {
       children: [
         { index: true, element: <Home /> },
         { path: 'comic', element: <Comic /> },
-        { path: 'origin', element: <Origin /> }
+        { path: 'origin', element: <Origin /> },
+        { path: 'sign', element: <Sign /> }
       ]
     },
     // 重定向
